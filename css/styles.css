@@ -5,6 +5,172 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --verde: #11f155;
+    --fuente-pricipal: 3.8rem;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.header{
+    text-align: center;
+}
+body{
+    font-size: 16px;/*1rem=10px*/
+    font-family: Architects Daughter;
+    background-color: linear-gradient(to top, #111, var (--blanco) 100%);
+}
+/* #DFE9F3, */
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1, h2, h3{
+    text-align: center;
+}
+/* .titulo{
+    font-size: 4rem;
+    font-family: luxurious script;
+} */
+.titulo span{
+    font-size:2rem;
+    font-family: Baloo Bhaijaan;
+}
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto;
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight:bold;
+    border-radius: .25rem;
+    text-align: center;
+    width: 90%;
+}
+@media(min-width:768px){
+    .boton{
+        width: auto;
+    }
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.navegacion-principal a{
+    display:block;
+    text-decoration: none;
+    color: var(--oscuro);
+    font-size: 2.5rem;
+    font-weight: 70;
+    color: var(--blanco);
+    padding: 1rem;
+}
+.navegacion-principal a:hover{
+    background-color: #0D0;
+}
+/* .contenedor{} */
+.nav-bg{
+    background-color: yellowgreen;
+    border-radius: 1.5rem;
+}
+/* @media(min-width:460px){
+    body{
+        background: #bbb;
+    } 
+}*/
+@media(min-width: 800px){
+    body{
+        background: #ccc;
+    }
+    .navegacion-principal{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* agregamos para mostrar modelo de caja */
+    height: 45rem;
+    /* padding: 20px; */
+    position: relative;
+}
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(50, 150, 80, .5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+}
+/* servicios */
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    background-color: white;
+    padding: 2rem;
+}
+.servicios{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* grid-template-columns: 33rem 33rem 33rem;  */ 
+    /* grid-template-rows: 20rem 80rem; */
+    /* grid-template-columns: repeat(3,33%);   */
+    /* grid-template-columns: repeat(3,1fr);   */
+    /* border: .5rem solid var(--gris);
+    grid-template-rows: repeat(3, 1fr);
+    gap:3rem; */
+}
+@media(min-width: 768px){
+    .servicios{
+        display:grid;
+        border: .5rem solid var(--gris);
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
+}       
+.servicio .iconos{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: bold;
+    font-size: 2rem;
 }
 .servicio p{
     line-height: 2rem;
